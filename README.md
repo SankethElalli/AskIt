@@ -1,4 +1,4 @@
-# AskIt — AI-Powered Questionnaire Answering Tool
+# AskIt
 
 AskIt automates the process of answering questionnaires by combining document upload, RAG (Retrieval-Augmented Generation) via an n8n AI agent, and a clean review/export workflow.
 
