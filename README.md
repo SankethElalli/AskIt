@@ -34,7 +34,7 @@ AskIt automates the process of answering questionnaires by combining document up
 
 ## Pages & Features
 
-### `/` — Home
+### `/home
 Landing page describing the four-step workflow (Upload → Analyse → Verify → Export).
 
 ### `/login` & `/signup`
