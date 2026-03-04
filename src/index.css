@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 95%;          /* #F2F2F2 */
+    --foreground: 0 0% 0%;           /* #000000 */
+    --card: 40 24% 87%;              /* #EAE4D5 */
+    --card-foreground: 0 0% 0%;      /* #000000 */
+    --popover: 40 24% 87%;           /* #EAE4D5 */
+    --popover-foreground: 0 0% 0%;   /* #000000 */
+    --primary: 0 0% 0%;              /* #000000 */
+    --primary-foreground: 0 0% 95%;  /* #F2F2F2 */
+    --secondary: 40 24% 87%;         /* #EAE4D5 */
+    --secondary-foreground: 0 0% 0%; /* #000000 */
+    --muted: 40 24% 87%;             /* #EAE4D5 */
+    --muted-foreground: 40 10% 47%;  /* mid-taupe */
+    --accent: 40 10% 67%;            /* #B6B09F */
+    --accent-foreground: 0 0% 0%;    /* #000000 */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 40 10% 80%;            /* warm light border */
+    --input: 40 10% 80%;
+    --ring: 0 0% 0%;                 /* #000000 */
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 40 10% 60%;
+    --accent: 40 10% 67%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
+
+/* Gradient text utility — palette: taupe → black */
+.gradient-text {
+  @apply bg-gradient-to-r from-[#B6B09F] to-[#000000] bg-clip-text text-transparent;
+}
+
+/* Glass effect — warm cream tint */
+.glass {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(234, 228, 213, 0.75);
+  border: 1px solid rgba(182, 176, 159, 0.3);
+}
+
+.dark .glass {
+  background: rgba(20, 20, 20, 0.75);
+  border: 1px solid rgba(182, 176, 159, 0.1);
+}
