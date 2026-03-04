@@ -27,7 +27,7 @@ AskIt automates the process of answering questionnaires by combining document up
 | Auth & Database | Supabase JS | 2.49.2 |
 | PDF parsing | pdfjs-dist | 5.5.207 |
 | DOCX parsing | mammoth | 1.11.0 |
-| Automation / AI | n8n (self-hosted) | — |
+| Automation / AI | n8n (self-hosted) | 2.7.5 |
 | Utility | clsx + tailwind-merge, class-variance-authority | 2.1.1 / 3.3.0 / 0.7.1 |
 
 ---
